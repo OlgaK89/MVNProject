@@ -13,7 +13,7 @@ import utilities.PropertyReader;
 
         @Test (groups = {"smoke"})
        public void positiveRecipeConvert() {
-            //driver.get(PropertyReader.getProperty("url"));
+            driver.get(PropertyReader.getProperty("url"));
 
             driver.findElement(By.partialLinkText("Recipe Resizer")).click();
 
@@ -40,7 +40,7 @@ import utilities.PropertyReader;
 
         @Test(groups = {"smoke"})
       public void negativeRecipeConvert() {
-            //driver.get(PropertyReader.getProperty("url"));
+            driver.get(PropertyReader.getProperty("url"));
 
             RecipePage rp = new RecipePage();
             rp.recipePage.click();
@@ -57,6 +57,8 @@ import utilities.PropertyReader;
 
         @Test(groups = {"smoke"})
         public void negativeIngredientsQty() {
+
+            driver.get(PropertyReader.getProperty("url"));
 
             driver.findElement(By.name("Ingredients[0].Quantity")).sendKeys("-2");
             driver.findElement(By.xpath("//*[@id=\"Ingredients[0].Measurement\"]/option[4]"));
@@ -77,6 +79,8 @@ import utilities.PropertyReader;
 
         @Test(groups = {"smoke"})
                 public void positiveIngredientsQty(){
+
+            driver.get(PropertyReader.getProperty("url"));
 
                     driver.findElement(By.name("Ingredients[0].Quantity")).sendKeys("2");
                     driver.findElement(By.xpath("//*[@id=\"Ingredients[0].Measurement\"]/option[4]"));

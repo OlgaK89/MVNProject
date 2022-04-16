@@ -20,7 +20,7 @@ public class LoginTest extends TestBase {
         loginPage.password.sendKeys(PropertyReader.getProperty("pass"));
 
 
-    //new LoginPage().loginWithValidCredentials();
+    new LoginPage().loginWithValidCredentials();
 
 
 
