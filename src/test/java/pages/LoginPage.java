@@ -21,7 +21,6 @@ public class LoginPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-   //@FindBy (xpath = "//a[@aria-label=\"login to your account\"]")
     @FindBy (partialLinkText = "Login to your")
    public WebElement loginButton;
 
